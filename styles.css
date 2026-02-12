@@ -14,7 +14,7 @@ body{
     padding-bottom: 12px;
     justify-content: center;
 }
-.top1{
+.top1 , .top3{
     margin-top: 12px;
     align-items: center;
     padding: 12px;

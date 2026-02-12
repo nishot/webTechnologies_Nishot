@@ -1,0 +1,106 @@
+/* Basic Settings */
+body {
+    background-color: #0a0a0a; 
+    color: #f4f4f4;            
+    font-family: sans-serif;   
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    padding: 40px 0;
+}
+
+h1 {
+    color: #d4af37; 
+    font-size: 40px;
+    letter-spacing: 4px;
+    margin: 0;
+}
+
+nav {
+    margin-top: 20px;
+}
+
+nav a {
+    color: #a0a0a0;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #d4af37;
+}
+
+.main, section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+
+article, fieldset {
+    background-color: #1a1a1a; 
+    border: 1px solid #333;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+img {
+    border-radius: 5px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
+main {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+input, textarea {
+    width: 90%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #000;
+    border: 1px solid #444;
+    color: white;
+    border-radius: 5px;
+}
+
+
+button, input[type="submit"] {
+    background-color: #d4af37;
+    color: black;
+    border: none;
+    padding: 10px 30px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: #f4f4f4;
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    color: #777;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #333;
+    margin: 20px 0;
+}

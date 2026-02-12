@@ -1,0 +1,82 @@
+body{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    align-content: center;
+    justify-content: center;
+    padding: 12px;
+    background-color: antiquewhite;
+
+}
+.id-card{
+    margin-top:3%;
+    border: 1px solid whitesmoke;
+    background-color: aliceblue;
+}
+
+.top{
+    text-align: center;
+    background-color: #001aad;
+    color: white;
+    padding: 12px;
+    padding-left: 21px;
+    padding-right: 21px;
+    margin: auto;
+}
+.middle{
+    padding-left: 12px;
+    text-align: justify;
+}
+.logo{
+    padding-top: 12px;
+}
+.link{
+    color: orangered;
+}
+
+hr{
+  height: 6px;
+  margin:0px;
+  background-color: orangered; 
+  border: none;
+}
+.student{
+    size: 12px;
+    border: none;
+    padding: 0px;
+}
+.bottom{
+    display: flex;
+    
+}
+#year{
+    display: inline-block;  
+    background-color: rgb(255, 68, 0);
+    color: white;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    text-align: center;
+    margin: 0px;
+}
+.profile{
+    display: flex;
+}
+.profile img{
+    padding-left: 4px;
+    height: 132px;
+    width: 124px;
+}
+.Signature{
+    text-align: right;
+    justify-self: end;
+    padding-left: 120px;
+    padding-top: 40px;
+}
+.line{
+    color: black;
+}
+.box{
+    margin-top:0px;
+    background-color: #001aad;
+    height:5px;
+}

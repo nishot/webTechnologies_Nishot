@@ -1,0 +1,86 @@
+body {
+  background-image: 
+    linear-gradient(rgba(2,6,23,0.56), rgba(2,6,23,0.65)),
+    url('src/photo-1531156992292-d36397ee9184.avif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  color: white;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.top{
+    display: flex;
+    border-color: aliceblue;
+    border: 2px;
+    padding-left: 12px;
+}
+.toplog{
+    padding-left: 3%;
+    margin-left: 2%;
+}
+.topnav{
+    display: inline-flex;
+    align-items: center;
+    gap: 20%;
+    padding-left: 35%;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    color: gray;
+}
+.topnav h2{
+    border: 0px;
+    padding: 0px;
+    margin:0px;
+
+}
+
+.main{
+    display: flex;
+    padding: 2%;
+    gap: 12px;
+    
+}
+.myimage{
+    padding-left: 2%;
+}
+
+.myimage img{
+    height:500px;
+    width: auto;
+    padding: 12px;
+}
+.side{
+    display: flex;
+    align-items: center;
+    text-align: left;
+    backdrop-filter: blur(2px);
+    padding: 12px;
+}
+.side-top{
+    align-items: center;
+    text-align: center;
+    padding-left: 12px;
+}
+h1{
+    background: linear-gradient(to right, #ffffff, #a8ff78); /* Adjust colors to match theme */
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  
+}
+.des{
+    color: rgba(255, 255, 255, 0.85);
+    font-family:sans-serif;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+ 

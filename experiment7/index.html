@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Form</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<form onsubmit="return false">
+
+<label>Full Name</label>
+<input type="text" id="full-name">
+
+<label>Email</label>
+<input type="email" id="user-email">
+
+<label>Password</label>
+<input type="password" id="user-password">
+
+<label>Age</label>
+<input type="number" id="user-age">
+
+<label>Membership</label>
+<select id="membership">
+<option>Basic</option>
+<option>Pro</option>
+<option>Premium</option>
+</select>
+
+<p>Gender</p>
+<div class="gender">
+<label><input type="radio" name="gender" value="Male"> Male</label>
+<label><input type="radio" name="gender" value="Female"> Female</label>
+</div>
+
+<div class="checkbox">
+<label><input type="checkbox" id="terms"> Agree Terms</label>
+</div>
+
+<br><br>
+
+<label>Bio</label>
+<textarea id="bio"></textarea>
+
+<button onclick="saveData()">Register</button>
+<button onclick="showData()">Show Data</button>
+<button onclick="downloadCSV()">Download CSV</button>
+
+</form>
+
+<div id="display">No details</div>
+
+<script>
+
+let arr=[]
+
+function saveData(){
+
+const fullname=document.getElementById("full-name").value
+const email=document.getElementById("user-email").value
+const password=document.getElementById("user-password").value
+const age=document.getElementById("user-age").value
+const membership=document.getElementById("membership").value
+const bio=document.getElementById("bio").value
+
+let gender=""
+const g=document.getElementsByName("gender")
+
+for(let i=0;i<g.length;i++){
+if(g[i].checked){
+gender=g[i].value
+}
+}
+
+const terms=document.getElementById("terms").checked
+
+const data=[fullname,email,password,age,membership,gender,terms,bio]
+
+arr.push(data)
+
+document.getElementById("display").innerText="Saved"
+
+}
+
+function showData(){
+
+let text=""
+
+for(let i=0;i<arr.length;i++){
+text=text+arr[i].join(" , ")+"\n"
+}
+
+document.getElementById("display").innerText=text
+
+}
+
+function downloadCSV(){
+
+let csv="Name,Email,Password,Age,Membership,Gender,Terms,Bio\n"
+
+for(let i=0;i<arr.length;i++){
+csv=csv+arr[i].join(",")+"\n"
+}
+
+const a=document.createElement("a")
+a.href="data:text/csv;charset=utf-8,"+encodeURI(csv)
+a.download="formdata.csv"
+a.click()
+
+}
+
+</script>
+
+</body>
+</html>

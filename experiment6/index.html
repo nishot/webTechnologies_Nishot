@@ -1,62 +1,91 @@
-<!-- Create a form with all fields, including checkboxes, radio buttons and input fields etc. And print that using JavaScript in a div. -->
-
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Form</title>
 </head>
+
 <body>
+
     <div id="choose">
         <p>New here</p>
         <button id="signup">Sign up</button>
+
         <p>Existing User</p>
         <button id="login">Login</button>
     </div>
-<div id="show">
 
-</div>
-<br>
-<br>
+    <div id="show"></div>
+
+    <br>
+    <br>
+
     <div id="form_main_login" style="display: none;">
-    <form id="loginform" onsubmit="return validateLogin()">
-        <label for="email">Email: </label>
-        <input type="email"><br>
-        <label for="password">Password</label>
-        <input type="password"><br>
-        <button style="background-color: #002aff;;">Login</button>
-    </form><br>
+        <form id="loginform">
+
+            <label for="email">Email:</label>
+            <input type="email">
+            <br>
+
+            <label for="password">Password</label>
+            <input type="password">
+            <br>
+
+            <button type="button" style="background-color:#002aff;">Login</button>
+
+        </form>
+        <br>
     </div>
 
     <div id="form_main_sign_up" style="display: none;">
-        <form id="signupform" onsubmit="return validate()">
-            <label for="full name">Full Name: </label>
-            <input type="text" placeholder="Full Name"><br>
-            <label for="email">Email: </label>
-            <input type="email" placeholder="example@gmail.com"><br>
-            <label for="password">Password</label>
-            <input type="password"><br>
-            <label for="gender">Gender</label><br>
-            <input type="radio" name="gender">
-            <label for="male">Male</label>
-            <input type="radio" name="gender">
-            <label for="female">female</label><br>
-            <select id="exerciseLevel">
-                    <option value="">Select Your Car</option>
-                    <option value="Bugati">Bugati</option>
-                    <option value="Ferrari">Ferrari</option>
-            </select><br>
-            <input type="checkbox">
-            <label for="des">I agree to terms and condition</label><br>
+        <form id="signupform">
 
-           <button type="submit">Submit</button>
+            <label for="fullname">Full Name:</label>
+            <input type="text" placeholder="Full Name">
+            <br>
+
+            <label for="email">Email:</label>
+            <input type="email" placeholder="example@gmail.com">
+            <br>
+
+            <label for="password">Password</label>
+            <input type="password">
+            <br>
+
+            <label for="gender">Gender</label>
+            <br>
+
+            <input type="radio" name="gender" value="Male">
+            <label>Male</label>
+
+            <input type="radio" name="gender" value="Female">
+            <label>Female</label>
+            <br>
+
+            <select id="exerciseLevel">
+                <option value="">Select Your Car</option>
+                <option value="Bugati">Bugati</option>
+                <option value="Ferrari">Ferrari</option>
+            </select>
+            <br>
+
+            <input type="checkbox" id="terms">
+            <label for="terms">I agree to terms and condition</label>
+            <br>
+
+            <button type="button" onclick="display()">Submit</button>
             <button id="Reset" type="reset">Reset</button>
+
         </form>
     </div>
 
+    <div id="display">nothing to display</div>
+
     <script src="main.js" defer></script>
+
 </body>
+
 </html>

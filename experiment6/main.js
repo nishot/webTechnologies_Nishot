@@ -35,7 +35,6 @@ g=gender.value
 document.getElementById('display').innerText=
 "Name: "+fullName.value+
 "\nEmail: "+email.value+
-"\nPassword: "+password.value+
 "\nGender: "+g+
 "\nLevel: "+select.value+
 "\nTerms: "+terms.checked
@@ -50,7 +49,6 @@ const email=form.querySelector('input[type="email"]')
 const password=form.querySelector('input[type="password"]')
 
 document.getElementById('display').innerText=
-"Login Email: "+email.value+
-"\nPassword: "+password.value
+"Login Email: "+email.value
 
 }

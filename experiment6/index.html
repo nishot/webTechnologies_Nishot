@@ -1,91 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Form</title>
+    <title>Modern Login Form</title>
 </head>
-
 <body>
 
+<div class="container">
     <div id="choose">
-        <p>New here</p>
-        <button id="signup">Sign up</button>
-
-        <p>Existing User</p>
-        <button id="login">Login</button>
+        <div class="choose-option">
+            <p>New here?</p>
+            <button id="signup" class="btn-toggle">Sign up</button>
+        </div>
+        <div class="choose-option">
+            <p>Existing User?</p>
+            <button id="login" class="btn-toggle">Login</button>
+        </div>
     </div>
 
-    <div id="show"></div>
-
-    <br>
-    <br>
-
-    <div id="form_main_login" style="display: none;">
+    <div id="form_main_login" style="display: none;" class="form-card">
+        <h2>Welcome Back</h2>
         <form id="loginform">
+            <div class="input-group">
+                <label for="login-email">Email:</label>
+                <input type="email" id="login-email" placeholder="Enter your email">
+            </div>
 
-            <label for="email">Email:</label>
-            <input type="email">
-            <br>
+            <div class="input-group">
+                <label for="login-password">Password:</label>
+                <input type="password" id="login-password" placeholder="Enter your password">
+            </div>
 
-            <label for="password">Password</label>
-            <input type="password">
-            <br>
-
-            <button type="button" style="background-color:#002aff;">Login</button>
-
+            <button type="button" class="btn-primary" onclick="login()">Login</button>
         </form>
-        <br>
     </div>
 
-    <div id="form_main_sign_up" style="display: none;">
+    <div id="form_main_sign_up" style="display: none;" class="form-card">
+        <h2>Create Account</h2>
         <form id="signupform">
+            <div class="input-group">
+                <label for="fullname">Full Name:</label>
+                <input type="text" placeholder="Full Name">
+            </div>
 
-            <label for="fullname">Full Name:</label>
-            <input type="text" placeholder="Full Name">
-            <br>
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="email" placeholder="example@gmail.com">
+            </div>
 
-            <label for="email">Email:</label>
-            <input type="email" placeholder="example@gmail.com">
-            <br>
+            <div class="input-group">
+                <label for="password">Password:</label>
+                <input type="password" placeholder="Enter a secure password">
+            </div>
 
-            <label for="password">Password</label>
-            <input type="password">
-            <br>
+            <div class="input-group gender-group">
+                <label>Gender:</label>
+                <label class="radio-label"><input type="radio" name="gender" value="Male"> Male</label>
+                <label class="radio-label"><input type="radio" name="gender" value="Female"> Female</label>
+            </div>
 
-            <label for="gender">Gender</label>
-            <br>
+            <div class="input-group">
+                <label for="exerciseLevel">Select Your Car:</label>
+                <select id="exerciseLevel">
+                    <option value="">Select a car model</option>
+                    <option value="Bugati">Bugati</option>
+                    <option value="Ferrari">Ferrari</option>
+                    <option value="Lamborghini">Lamborghini</option>
+                </select>
+            </div>
 
-            <input type="radio" name="gender" value="Male">
-            <label>Male</label>
+            <div class="input-group checkbox-group">
+                <input type="checkbox" id="terms">
+                <label for="terms">I agree to the terms and conditions</label>
+            </div>
 
-            <input type="radio" name="gender" value="Female">
-            <label>Female</label>
-            <br>
-
-            <select id="exerciseLevel">
-                <option value="">Select Your Car</option>
-                <option value="Bugati">Bugati</option>
-                <option value="Ferrari">Ferrari</option>
-            </select>
-            <br>
-
-            <input type="checkbox" id="terms">
-            <label for="terms">I agree to terms and condition</label>
-            <br>
-
-            <button type="button" onclick="display()">Submit</button>
-            <button id="Reset" type="reset">Reset</button>
-
+            <div class="button-group">
+                <button type="button" class="btn-primary" onclick="display()">Submit</button>
+                <button id="Reset" type="reset" class="btn-secondary">Reset</button>
+            </div>
         </form>
     </div>
 
-    <div id="display">nothing to display</div>
+    <div id="display" class="output-box">No data submitted yet.</div>
+</div>
 
-    <script src="main.js" defer></script>
-
+<script src="main.js" defer></script>
 </body>
-
 </html>
